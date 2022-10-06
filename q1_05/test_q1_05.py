@@ -43,11 +43,13 @@ def is_one_away_equal(s1: str, s2: str) -> bool:
 
     return False
 
+
 def str_diff(s1: str, s2: str) -> str:
     result = str(s1)
     for s in s2:
         result = result.replace(s, "", 1)
     return result
+
 
 @pytest.mark.parametrize(
     "sfrom, sto, expected", [
