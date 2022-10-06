@@ -19,8 +19,7 @@ def is_one_away_plus(longer: str, shorter: str) -> bool:
 
     c = str_diff(longer, shorter)
     for i in range(len(shorter) + 1):
-        candidate = shorter[:i] + c + shorter[i:]
-        if candidate == longer:
+        if shorter[:i] + c + shorter[i:] == longer:
             return True
 
     return False
@@ -37,8 +36,7 @@ def is_one_away_equal(s1: str, s2: str) -> bool:
         return False
 
     for i in range(len(s2) + 1):
-        candidate = s2[:i] + only1 + s2[i + 1:]
-        if candidate == s1:
+        if s2[:i] + only1 + s2[i + 1:] == s1:
             return True
 
     return False
