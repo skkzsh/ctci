@@ -5,7 +5,8 @@ import pytest
 
 
 def rotate_matrix(matrix: List[List[int]]) -> List[List[int]]:
-    return matrix
+    n = len(matrix)
+    return [[matrix[n - 1 - j][i] for j in range(n)] for i in range(n)]
 
 
 @pytest.mark.parametrize(
