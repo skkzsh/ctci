@@ -9,14 +9,22 @@ def zero_matrix(matrix: List[List[int]]) -> List[List[int]]:
     m = len(matrix[0])
     n = len(matrix)
     result = copy.deepcopy(matrix)
+    zero_rows = set()
+    zero_cols = set()
 
     for x in range(m):
         for y in range(n):
             if matrix[x][y] == 0:
-                for i in range(m):
-                    result[i][y] = 0
-                for j in range(n):
-                    result[x][j] = 0
+                zero_rows.add(x)
+                zero_cols.add(y)
+
+    for x in zero_rows:
+        for y in range(n):
+            result[x][y] = 0
+
+    for y in zero_cols:
+        for x in range(m):
+            result[x][y] = 0
 
     return result
 
