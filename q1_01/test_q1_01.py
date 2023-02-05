@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import collections
 import pytest
+import collections
 
 
 def is_unique(s: str) -> bool:

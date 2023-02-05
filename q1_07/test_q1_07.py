@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-from typing import List
 import pytest
+from typing import List
 
 
 def rotate_matrix(matrix: List[List[int]]) -> List[List[int]]:

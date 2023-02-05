@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
+import pytest
 import copy
 from typing import List
-import pytest
 
 
 def zero_matrix(matrix: List[List[int]]) -> List[List[int]]:
