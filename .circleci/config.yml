@@ -13,3 +13,5 @@ jobs:
           command: pyright
       - run:
           command: pytest
+          environment:
+            FORCE_COLOR: 1 # pytest の出力が白黒にならないようにする
