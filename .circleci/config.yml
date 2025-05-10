@@ -6,11 +6,13 @@ jobs:
     steps:
       - checkout
       - run:
-          command: pip install pyright pytest
+          command: pip install pytest mypy pyright
       - run:
           command: uvx ruff check
       - run:
           command: pyright
+      - run:
+          command: mypy **/*.py
       - run:
           command: pytest
           environment:
