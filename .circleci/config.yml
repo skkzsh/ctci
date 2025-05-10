@@ -6,6 +6,10 @@ jobs:
     steps:
       - checkout
       - run:
-          command: pip install pytest
+          command: pip install pytest pyright ruff
+      - run:
+          command: ruff check
+      - run:
+          command: pyright
       - run:
           command: pytest
