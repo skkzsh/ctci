@@ -1,10 +1,7 @@
-#!/usr/bin/env python
-
 import pytest
-from typing import List
 
 
-def rotate_matrix(matrix: List[List[int]]) -> List[List[int]]:
+def rotate_matrix(matrix: list[list[int]]) -> list[list[int]]:
     n = len(matrix)
     return [[matrix[n - 1 - j][i] for j in range(n)] for i in range(n)]
 
@@ -25,7 +22,7 @@ def rotate_matrix(matrix: List[List[int]]) -> List[List[int]]:
                 [24, 19, 14, 9, 4],
                 [25, 20, 15, 10, 5]
             ]
-    )]
+    )],
 )
-def test(matrix: List[List[int]], expected: List[List[int]]):
+def test(matrix: list[list[int]], expected: list[list[int]]):
     assert rotate_matrix(matrix) == expected

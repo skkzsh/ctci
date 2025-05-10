@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import pytest
 
 
@@ -10,7 +8,7 @@ def urlify(s: str, num: int) -> str:
 @pytest.mark.parametrize(
     "s, num, expected", [
         ("Mr John Smith   ", 13, "Mr%20John%20Smith"),
-    ]
+    ],
 )
 def test(s: str, num: int, expected: str):
     assert urlify(s, num) == expected

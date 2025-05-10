@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import pytest
 
 
@@ -73,7 +71,7 @@ def test_is_one_away(sfrom: str, sto: str, expected: bool):
         ("pale", "palee", ""),
         ("pale", "pala", "e"),
         ("pale", "bake", "pl"),
-    ]
+    ],
 )
 def test_str_diff(s1: str, s2: str, expected: str):
     assert str_diff(s1, s2) == expected

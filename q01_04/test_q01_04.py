@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import pytest
 import collections
 
@@ -13,7 +11,7 @@ def sut(s: str) -> bool:
         ("Tact Ca", True),
         ("Tact Coa", True),
         ("Fact Coa", False),
-    ]
+    ],
 )
 def test(s: str, expected: bool):
     assert sut(s) == expected

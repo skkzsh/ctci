@@ -1,11 +1,8 @@
-#!/usr/bin/env python
-
 import pytest
 import copy
-from typing import List
 
 
-def zero_matrix(matrix: List[List[int]]) -> List[List[int]]:
+def zero_matrix(matrix: list[list[int]]) -> list[list[int]]:
     m = len(matrix[0])
     n = len(matrix)
     result = copy.deepcopy(matrix)
@@ -45,7 +42,7 @@ def zero_matrix(matrix: List[List[int]]) -> List[List[int]]:
                 [0, 0, 0, 0, 0],
                 [21, 0, 23, 24, 0]
             ]
-    )]
+    )],
 )
-def test(matrix: List[List[int]], expected: List[List[int]]):
+def test(matrix: list[list[int]], expected: list[list[int]]):
     assert zero_matrix(matrix) == expected

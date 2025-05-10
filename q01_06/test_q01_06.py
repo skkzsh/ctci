@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import pytest
 
 
@@ -21,7 +19,7 @@ def compress_string(original: str) -> str:
     "original, expected", [
         ("aabcccccaaa", "a2b1c5a3"),
         ("aabcca", "aabcca"),
-    ]
+    ],
 )
 def test(original: str, expected: bool):
     assert compress_string(original) == expected
