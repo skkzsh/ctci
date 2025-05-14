@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: cimg/python:3.13
+    environment:
+      FORCE_COLOR: 1 # 出力が白黒にならないようにする
     steps:
       - checkout
       - run:
@@ -15,5 +17,3 @@ jobs:
           command: mypy **/*.py
       - run:
           command: pytest
-          environment:
-            FORCE_COLOR: 1 # pytest の出力が白黒にならないようにする
