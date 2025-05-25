@@ -1,3 +1,5 @@
+from typing import Final
+
 import pytest
 
 
@@ -15,7 +17,7 @@ def is_one_away_plus(longer: str, shorter: str) -> bool:
     if len(longer) - len(shorter) != 1:
         return False
 
-    c = str_diff(longer, shorter)
+    c: Final = str_diff(longer, shorter)
     for i in range(len(shorter) + 1):
         if shorter[:i] + c + shorter[i:] == longer:
             return True
@@ -27,8 +29,8 @@ def is_one_away_equal(s1: str, s2: str) -> bool:
     if len(s1) - len(s2) != 0:
         return False
 
-    only1 = str_diff(s1, s2)
-    only2 = str_diff(s2, s1)
+    only1: Final = str_diff(s1, s2)
+    only2: Final = str_diff(s2, s1)
 
     if len(only1) != 1 or len(only2) != 1:
         return False

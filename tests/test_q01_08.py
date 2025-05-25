@@ -1,13 +1,15 @@
+from typing import Final
+
 import pytest
 import copy
 
 
 def zero_matrix(matrix: list[list[int]]) -> list[list[int]]:
-    m = len(matrix[0])
-    n = len(matrix)
-    result = copy.deepcopy(matrix)
-    zero_rows = set()
-    zero_cols = set()
+    m: Final = len(matrix[0])
+    n: Final = len(matrix)
+    result: Final = copy.deepcopy(matrix)
+    zero_rows: Final[set[int]] = set()
+    zero_cols: Final[set[int]] = set()
 
     for x in range(m):
         for y in range(n):

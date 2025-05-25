@@ -1,8 +1,10 @@
+from typing import Final
+
 import pytest
 
 
 def rotate_matrix(matrix: list[list[int]]) -> list[list[int]]:
-    n = len(matrix)
+    n: Final = len(matrix)
     return [[matrix[n - 1 - j][i] for j in range(n)] for i in range(n)]
 
 
