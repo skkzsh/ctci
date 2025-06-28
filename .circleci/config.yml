@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: pip install pytest mypy pyright
+          command: pip install pytest pytest-cov mypy pyright
       - run:
           command: uvx ruff check
       # - run:
@@ -18,4 +18,4 @@ jobs:
       - run:
           command: mypy **/*.py
       - run:
-          command: pytest
+          command: pytest --cov --cov-branch
