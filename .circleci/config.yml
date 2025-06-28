@@ -1,6 +1,17 @@
 version: 2
+
 jobs:
-  build:
+  ruff:
+    docker:
+      - image: cimg/python:3.13
+    steps:
+      - checkout
+      - run:
+          command: uvx ruff check
+      # - run:
+      #     command: uvx ruff format --check --diff
+
+  test:
     docker:
       - image: cimg/python:3.13
     environment:
@@ -10,12 +21,15 @@ jobs:
       - run:
           command: pip install pytest pytest-cov mypy pyright
       - run:
-          command: uvx ruff check
-      # - run:
-      #     command: uvx ruff format --check --diff
-      - run:
           command: pyright
       - run:
           command: mypy **/*.py
       - run:
           command: pytest --cov --cov-branch
+
+workflows:
+  version: 2
+  ruff_and_test:
+    jobs:
+      - ruff
+      - test
