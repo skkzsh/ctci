@@ -36,7 +36,7 @@ def is_one_away_equal(s1: str, s2: str) -> bool:
         return False
 
     for i in range(len(s2) + 1):
-        if s2[:i] + only1 + s2[i + 1:] == s1:
+        if s2[:i] + only1 + s2[i + 1 :] == s1:
             return True
 
     return False
@@ -50,7 +50,8 @@ def str_diff(s1: str, s2: str) -> str:
 
 
 @pytest.mark.parametrize(
-    "sfrom, sto, expected", [
+    "sfrom, sto, expected",
+    [
         ("pale", "ale", True),
         ("pale", "apale", True),
         ("pale", "bale", True),
@@ -58,14 +59,15 @@ def str_diff(s1: str, s2: str) -> str:
         ("pale", "palee", True),
         ("pale", "pala", True),
         ("pale", "bake", False),
-    ]
+    ],
 )
 def test_is_one_away(sfrom: str, sto: str, expected: bool):
     assert is_one_away(sfrom, sto) == expected
 
 
 @pytest.mark.parametrize(
-    "s1, s2, expected", [
+    "s1, s2, expected",
+    [
         ("pale", "ale", "p"),
         ("pale", "apale", ""),
         ("pale", "bale", "p"),

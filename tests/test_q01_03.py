@@ -2,11 +2,12 @@ import pytest
 
 
 def urlify(s: str, num: int) -> str:
-    return s.rstrip().replace(' ', '%20')
+    return s.rstrip().replace(" ", "%20")
 
 
 @pytest.mark.parametrize(
-    "s, num, expected", [
+    "s, num, expected",
+    [
         ("Mr John Smith   ", 13, "Mr%20John%20Smith"),
     ],
 )

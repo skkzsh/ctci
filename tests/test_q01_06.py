@@ -2,7 +2,7 @@ import pytest
 
 
 def compress_string(original: str) -> str:
-    compressed = ''
+    compressed = ""
     count = 0
 
     for i in range(len(original)):
@@ -16,7 +16,8 @@ def compress_string(original: str) -> str:
 
 
 @pytest.mark.parametrize(
-    "original, expected", [
+    "original, expected",
+    [
         ("aabcccccaaa", "a2b1c5a3"),
         ("aabcca", "aabcca"),
     ],

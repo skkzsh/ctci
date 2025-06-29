@@ -6,7 +6,8 @@ def is_permutaion(s1: str, s2: str) -> bool:
 
 
 @pytest.mark.parametrize(
-    "s1, s2, expected", [
+    "s1, s2, expected",
+    [
         ("[abc123]", "][1c2b3a", True),
         ("D!C!B", "BCD!", False),
         ("!BCD", "D!C!B", False),

@@ -7,7 +7,8 @@ def is_unique(s: str) -> bool:
 
 
 @pytest.mark.parametrize(
-    "s, expected", [
+    "s, expected",
+    [
         ("abc123!#$%&-=^~+*;:@`,./_()[]{}<>", True),
         ("B!C!D", False),
     ],

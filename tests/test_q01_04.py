@@ -7,7 +7,8 @@ def sut(s: str) -> bool:
 
 
 @pytest.mark.parametrize(
-    "s, expected", [
+    "s, expected",
+    [
         ("Tact Ca", True),
         ("Tact Coa", True),
         ("Fact Coa", False),
