@@ -19,7 +19,9 @@ jobs:
     steps:
       - checkout
       - run:
-          command: pip install pytest pytest-cov mypy pyright
+          command: pip install pytest pytest-cov mypy pyright ty
+      # - run:
+      #     command: ty check
       - run:
           command: pyright
       - run:
