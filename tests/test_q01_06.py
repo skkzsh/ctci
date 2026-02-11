@@ -22,5 +22,5 @@ def compress_string(original: str) -> str:
         ("aabcca", "aabcca"),
     ],
 )
-def test(original: str, expected: bool):
+def test(original: str, expected: str):
     assert compress_string(original) == expected
